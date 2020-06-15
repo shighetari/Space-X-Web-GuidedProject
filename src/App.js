@@ -13,12 +13,12 @@ export default function App() {
   const getData = () => {
     setIsFetchingData(true);
     fetchMissions()
-      .then(res => {
-        console.log(res);
+      .then((res) => {
+        // console.log(res);
         setIsFetchingData(false);
         setMissions(res.data);
       })
-      .catch(err => {
+      .catch((err) => {
         setIsFetchingData(false);
         setError(err.message);
       });
